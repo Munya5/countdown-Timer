@@ -15,7 +15,7 @@ const App = () => {
   const startTimer   = () => {
     const countdownDate = new Date(' May 30, 2023 00:00:00 ').getTime();
 
-    interval = setInterval(() => {
+    interval.current = setInterval(() => {
       const now = new Date().getTime();
       const distance = countdownDate - now;
 
@@ -38,6 +38,7 @@ const App = () => {
   } 
 
   useEffect(() => {
+      
       startTimer();
       return () => {
         clearInterval(interval.current);
