@@ -13,7 +13,7 @@ const App = () => {
   let interval = useRef();
 
   const startTimer   = () => {
-    const countdownDate = new Date(' December 31, 2023 00:00:00 ').getTime();
+    const countdownDate = new Date(' December 31, 2024 00:00:00 ').getTime();
 
     interval.current = setInterval(() => {
       const now = new Date().getTime();
